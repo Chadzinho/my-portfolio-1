@@ -7,37 +7,36 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick="switchLanguage('en')">
+                EN
+            </button>
+            <button class="lang-btn" onclick="switchLanguage('ja')">JP</button>
+        </div>
         <nav id="desktop-nav">
             <div class="logo">CW</div>
             <div>
                 <ul class="nav-links">
                     <li>
-                        <a href="#about" data-lang="en" class="active">About</a>
+                        <a href="#about" data-lang="en" class="active">About</a
+                        ><a href="#about" data-lang="ja">自己紹介</a>
                     </li>
                     <li>
                         <a href="#skills" data-lang="en" class="active"
                             >Skills</a
-                        >
+                        ><a href="#skills" data-lang="ja">スキル</a>
                     </li>
                     <li>
                         <a href="#projects" data-lang="en" class="active"
                             >Projects</a
-                        >
+                        ><a href="#projects" data-lang="ja">プロジェクト</a>
                     </li>
                     <li>
                         <a href="#contact" data-lang="en" class="active"
                             >Contact</a
-                        >
+                        ><a href="#contact" data-lang="ja">連絡先</a>
                     </li>
                 </ul>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn active" onclick="switchLanguage('en')">
-                    EN
-                </button>
-                <button class="lang-btn" onclick="switchLanguage('ja')">
-                    JP
-                </button>
             </div>
         </nav>
         <nav id="mobile-nav">
@@ -70,22 +69,29 @@
                 />
             </div>
             <div class="section-text">
-                <p class="hero-text-p1">Hello, I'm</p>
-                <h1 class="hero-title">Chad Williams</h1>
-                <p class="hero-text-p2">Full Stack Developer</p>
+                <p class="hero-text-p1 active" data-lang="en">Hello, I'm</p>
+                <p class="hero-text-p1" data-lang="ja">こんにちは、私は</p>
+                <h1 class="hero-title active" data-lang="en">Chad Williams</h1>
+                <h1 class="hero-title" data-lang="ja">ウィリアムズ・チャド</h1>
+                <p class="hero-text-p2 active" data-lang="en">
+                    Full Stack Developer
+                </p>
+                <p class="hero-text-p2" data-lang="ja">フルスタック開発者</p>
                 <div class="btn-container">
                     <button
                         class="btn btn-color-2"
                         onclick="window.open('./assets/resume-example.pdf')"
                     >
                         <!-- Replace this example pdf with my real CV once it's ready -->
-                        Download CV
+                        <span data-lang="en" class="active">Download CV</span>
+                        <span data-lang="ja">履歴書ダウンロード</span>
                     </button>
                     <button
                         class="btn btn-color-1"
                         onclick="location.href='./#contact'"
                     >
-                        Contact Info
+                        <span data-lang="en" class="active">Contact Info</span>
+                        <span data-lang="ja">連絡先情報</span>
                     </button>
                 </div>
                 <div id="socials-container">
@@ -106,8 +112,11 @@
         </section>
 
         <section id="about">
-            <p class="section-text-p1">Get to know more</p>
-            <h1 class="section-title">About Me</h1>
+            <p class="section-text-p1 active" data-lang="en">
+                Get to know more
+            </p>
+            <h1 class="section-title active" data-lang="en">About Me</h1>
+            <h1 class="section-title" data-lang="ja">自己紹介</h1>
             <div class="section-container">
                 <div class="pic-container">
                     <img
@@ -124,8 +133,12 @@
                                 alt="Experience icon"
                                 class="icon"
                             />
-                            <h3>Experience</h3>
-                            <p>1 year <br />Frontend Development</p>
+                            <h3 class="active" data-lang="en">Experience</h3>
+                            <h3 data-lang="ja">経験</h3>
+                            <p class="active" data-lang="en">
+                                1 year <br />Frontend Development
+                            </p>
+                            <p data-lang="ja">1年 <br />フロントエンド開発</p>
                         </div>
                         <div class="details-container">
                             <img
@@ -133,8 +146,15 @@
                                 alt="Education icon"
                                 class="icon"
                             />
-                            <h3>Education</h3>
-                            <p>B.A. Linguistics <br />UMass Amherst</p>
+                            <h3 class="active" data-lang="en">Education</h3>
+                            <h3 data-lang="ja">学歴</h3>
+                            <p class="active" data-lang="en">
+                                B.A. Linguistics <br />UMass Amherst
+                            </p>
+                            <p data-lang="ja">
+                                言語学の学士号
+                                <br />マサチューセッツ大学アマースト校
+                            </p>
                         </div>
                     </div>
                     <div class="text-container">
